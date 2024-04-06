@@ -40,10 +40,11 @@ const signup = async (req, res, next) => {
         sendResponse({
             res,
             status: 201,
-            message: 'Signup successful',
-            success: true,
+     
             data: {
                 token,
+                message: 'Signup successful',
+                success: true,
                 user: {
                     id: newUser.id,
                     email: newUser.email,
