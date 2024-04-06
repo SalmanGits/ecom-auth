@@ -72,9 +72,7 @@ const login = async (req, res, next) => {
         sendResponse({
             res,
             status: 200,
-            message: "Login successful",
-            success: true,
-            data: { token, user: { id: user._id, email: user.email } },
+            data: { token,message: "Login successful",success: true, user: { id: user._id, email: user.email } },
         });
     } catch (error) {
         next(error);
