@@ -97,6 +97,7 @@ const getAllCategories = async (req, res, next) => {
             res,
             status: 200,
             data: {
+                  success: true,
                 categories,
                 pagination: {
                     currentPage: page,
@@ -104,7 +105,7 @@ const getAllCategories = async (req, res, next) => {
                     totalCount,
                 },
             },
-            success: true,
+          
         });
     } catch (error) {
         next(error);
